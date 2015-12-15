@@ -1,0 +1,9 @@
+# http://www.vim.org/scripts/script.php?script_id=4450
+# Use ag, the_silver_searcher (better than ack, which is better than grep) 
+Bundle 'rking/ag.vim'
+
+# PHP Code Sniffer Fixer
+# https://github.com/stephpy/vim-php-cs-fixer
+# curl http://get.sensiolabs.org/php-cs-fixer.phar -o php-cs-fixer
+# sudo chmod a+x php-cs-fixer&&sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
+Bundle 'stephpy/vim-php-cs-fixer'
