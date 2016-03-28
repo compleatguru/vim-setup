@@ -1,0 +1,47 @@
+" Basic configuration
+
+" CtrlP Options
+let g:ctrlp_working_path_mode = 'ra'
+
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn|vagrant)$',
+    \ 'file': '\v\.(exe|so|dll|gitignore|gitkeep|gitmodules)$'
+    \ }
+
+" Unite Search Files
+function! Unite_ctrlp()
+      execute ':Unite  -buffer-name=files -start-insert buffer file_rec/async:'.ProjectRootGuess().'/'
+endfunction
+
+function! PHPCTag()
+"   ctags from ctags.io
+    execute '!echo "start"&&ctags -R --fields="*" --extra="*" --php-kinds="*" --languages=php&&echo "end"'
+endfunction
+
+
+" vim-airline
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
+
+
+" php-cs-fixer
+let g:php_cs_fixer_level="symfony"
+let g:php_cs_fixer_config="default"
+let g:php_cs_fixer_php_path="php"
+
+
+" phpcomplete-extended
+let g:phpcomplete_index_composer_command="composer"
+autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+
+" Refresh Browser after file save
+autocmd BufWritePost *.{css,scss,php,html} silent !$HOME/scripts/reload-chrome.sh
+
+
+" vdebug
+let g:vdebug_options = {'ide_key':'netbeans-xdebug'}
+let g:vdebug_options = {'break_on_open':0}
+let g:vdebug_options = {'server':''}
+let g:vdebug_options = {'port':'9999'}
+let g:vdebug_options = {'debug_file_level':2}
+let g:vdebug_options = {'debug_file':'$HOME/log/vdebug.log'}

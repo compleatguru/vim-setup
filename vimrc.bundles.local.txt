@@ -1,9 +1,70 @@
-# http://www.vim.org/scripts/script.php?script_id=4450
-# Use ag, the_silver_searcher (better than ack, which is better than grep) 
+Bundle "Valloric/YouCompleteMe"
+" http://www.vim.org/scripts/script.php?script_id=4450
+" Use ag, the_silver_searcher (better than ack, which is better than grep)
 Bundle 'rking/ag.vim'
 
-# PHP Code Sniffer Fixer
-# https://github.com/stephpy/vim-php-cs-fixer
-# curl http://get.sensiolabs.org/php-cs-fixer.phar -o php-cs-fixer
-# sudo chmod a+x php-cs-fixer&&sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
+" Threading for Vim
+Bundle 'Shougo/vimproc.vim'
+
+" Unite vim
+" https://github.com/Shougo/unite.vim
+Bundle 'Shougo/unite.vim'
+
+" To guess project root so that unite search is like controlp
+" https://github.com/dbakker/vim-projectroot
+Bundle 'dbakker/vim-projectroot'
+
+
+" https://github.com/tpope/vim-dispatch
+Bundle 'tpope/vim-dispatch'
+
+
+" Mysql/Database
+Bundle 'vim-scripts/dbext.vim'
+
+Bundle 'NLKNguyen/pipe-mysql.vim'
+
+Bundle 'junkblocker/unite-tasklist'
+
+" https://github.com/adoy/vim-php-refactoring-toolbox
+" Bundle 'adoy/vim-php-refactoring-toolbox'
+
+" Javascript
+Bundle 'moll/vim-node'
+"
+" https://github.com/jelera/vim-javascript-syntax
+" Plugin 'jelera/vim-javascript-syntax
+
+
+" Bundle 'michalliu/sourcebeautify.vim'
+
+" Bundle 'Olical/vim-enmasse'
+
+" Drupal
+" Bundle "benjifisher/Vim-Plugin-for-Drupal"
+Bundle 'git://drupalcode.org/project/vimrc.git', {'rtp': 'bundle/vim-plugin-for-drupal/'}
+
+" PHP
+Bundle "m2mdas/phpcomplete-extended"
+
+" https://github.com/joonty/vdebug
+Bundle "joonty/vdebug"
+
+" PHP Code Sniffer Fixer
+" https://github.com/stephpy/vim-php-cs-fixer
+" curl http://get.sensiolabs.org/php-cs-fixer.phar -o php-cs-fixer
+" sudo chmod a+x php-cs-fixer&&sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
 Bundle 'stephpy/vim-php-cs-fixer'
+
+" https://github.com/vim-php/phpctags
+Bundle 'vim-php/phpctags'
+
+" https://github.com/vim-php/tagbar-phpctags.vim
+Bundle 'vim-php/tagbar-phpctags.vim'
+
+" UnBundle - Uninstall plugins
+" UnBundle 'kchmck/vim-coffee-script'
+" UnBundle "shawncplus/phpcomplete.vim"
+" UnBundle 'Shougo/neocomplete.vim.git'
+" UnBundle 'Shougo/neosnippet'
+" UnBundle 'Shougo/neosnippet-snippets'
